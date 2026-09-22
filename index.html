@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#050b16">
+  <meta name="description" content="ALTZone - Clean the Zone">
+  <title>ALTZone — Clean the Zone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">▲</span> ALT<span>Zone</span></div>
+    <div class="top-links"><a href="#game">PLAY</a><span>•</span><a href="#reward">REWARD</a><span>•</span><a id="shopTop" href="#" target="_blank" rel="noopener">SHOP</a></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">ALTZONE PRESENTS</div>
+        <h1>CLEAN THE <b>ZONE</b></h1>
+        <p>Catch the falling gear. Save the setup. Unlock your reward.</p>
+        <button class="primary-btn" id="heroPlay">🎮 PLAY NOW <span>→</span></button>
+        <div class="scroll-hint">↓</div>
+      </div>
+      <div class="hero-character">
+        <div class="glow"></div>
+        <img src="assets/character.png" alt="ALTZone mascot">
+      </div>
+    </section>
+
+    <section class="game-section" id="game">
+      <div class="game-head">
+        <div><span class="label">SCORE</span><strong id="score">0</strong></div>
+        <div><span class="timer-icon">◷</span><strong id="timer">30</strong></div>
+      </div>
+      <div class="game-wrap">
+        <canvas id="gameCanvas"></canvas>
+        <div class="start-overlay" id="startOverlay">
+          <div class="start-card">
+            <div class="mini-logo">▲</div>
+            <h2>CATCH THE GEAR</h2>
+            <p>Catch <b>15 items</b> before the timer runs out.</p>
+            <p class="controls">Desktop: <b>← →</b> &nbsp; • &nbsp; Mobile: drag or use the buttons</p>
+            <button class="primary-btn" id="startBtn">START GAME →</button>
+          </div>
+        </div>
+        <div class="result-overlay hidden" id="resultOverlay">
+          <div class="result-card">
+            <div class="result-kicker" id="resultKicker">GAME OVER</div>
+            <h2 id="resultTitle">YOUR SCORE</h2>
+            <div class="big-score" id="finalScore">0</div>
+            <div class="result-stats">
+              <span>ITEMS CAUGHT <b id="caughtStat">0</b></span>
+              <span>TIME <b>00:00</b></span>
+            </div>
+            <button class="primary-btn" id="rewardBtn">🎁 CHECK YOUR REWARD</button>
+            <button class="text-btn" id="retryBtn">PLAY AGAIN</button>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-controls">
+        <button id="leftBtn">←</button>
+        <button id="rightBtn">→</button>
+      </div>
+      <p class="game-note">Catch keyboards, mice, headsets, controllers and more. Avoid the red hazards.</p>
+    </section>
+
+    <section class="reward-section" id="reward">
+      <div class="reward-card hidden" id="rewardCard">
+        <div class="confetti">✦ ✧ ✦ ✧ ✦</div>
+        <div class="eyebrow">ALTZONE REWARD</div>
+        <h2 id="rewardTitle">YOU DID IT!</h2>
+        <p>You cleaned the zone. Here's your ALTZone reward:</p>
+        <div class="coupon">
+          <div class="coupon-brand">▲<small>ALTZone</small></div>
+          <div class="coupon-code"><strong id="couponCode">ALT15</strong><span>15% OFF</span></div>
+        </div>
+        <button class="primary-btn" id="copyBtn">▣ COPY CODE</button>
+        <a class="primary-btn shop-btn" id="shopTop" href="#" target="_blank" rel="noopener">SHOP NOW →</a>
+        <p class="share-text">Share your score with your friends 👀</p>
+      </div>
+      <div class="reward-placeholder" id="rewardPlaceholder">
+        <div class="reward-icon">🎁</div>
+        <h2>UNLOCK YOUR REWARD</h2>
+        <p>Finish the challenge to reveal your ALTZone discount.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>▲ ALTZone</span><span>BETTER SETUPS. A CLEANER TOMORROW.</span></footer>
+  <script src="config.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

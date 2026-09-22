@@ -1,0 +1,10 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALTZone QR Generator</title>
+<style>body{font-family:Arial;background:#050b16;color:white;display:grid;place-items:center;min-height:100vh;margin:0}main{width:min(92%,500px);padding:30px;text-align:center;background:#0a1729;border-radius:20px}input{width:100%;padding:14px;border-radius:10px;border:1px solid #2ac8ff;background:#061226;color:white;margin:10px 0 16px;box-sizing:border-box}button{padding:14px 22px;border:0;border-radius:999px;background:#24c8ff;font-weight:800}#qr{margin:25px auto;background:white;padding:16px;width:max-content}</style>
+</head><body><main><h1>ALTZone QR</h1><p>Publish the game first, then paste its public HTTPS URL.</p>
+<input id="url" placeholder="https://your-game-url.com">
+<button onclick="makeQR()">GENERATE QR</button><div id="qr"></div></main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>function makeQR(){const u=document.getElementById('url').value.trim();const q=document.getElementById('qr');q.innerHTML='';if(!u)return;new QRCode(q,{text:u,width:220,height:220});}</script>
+</body></html>
